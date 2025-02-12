@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="assets/avatar.png" alt="Logo" height="80">
+    <img src="assets/avatar.png" alt="Logo" height="120">
   </a>
 
   <h3 align="center">Conversational AI Avatar</h3>
@@ -9,6 +9,10 @@
     An prototype to demonstrate the workflow of an end-to-end ai avatar, using speech-to-text, text-to-speech and an agentic workflow.
   </p>
 Demo Video:
+
+https://github.com/user-attachments/assets/9d35ec73-57c6-4924-983a-81117c959295
+
+
 
 </div>
 
