@@ -12,6 +12,7 @@ export default function AudioRecorder() {
   const messages = useConversation((state) => state.messages);
   const addMessage = useConversation((state) => state.addMessage);
   const setMessageResult = useConversation((state) => state.setMessageResult);
+  const setThinking = useConversation((state) => state.setThinking);
 
   const handleRecordClick = () => {
     if (isRecording) {
@@ -23,6 +24,7 @@ export default function AudioRecorder() {
 
   const fetchConversation = useCallback(
     async (audioBlob: Blob) => {
+      setThinking(true);
       const formData = new FormData();
       formData.append("audio", audioBlob, "audio.ogg");
       formData.append("messages", JSON.stringify(messages));
@@ -32,6 +34,7 @@ export default function AudioRecorder() {
           method: "POST",
           body: formData,
         });
+        setThinking(false);
 
         const result = JSON.parse((await response.headers.get("result")) || "{}");
         const userMessage = JSON.parse((await response.headers.get("usermessage")) || "{}");

@@ -14,13 +14,17 @@ interface MessageType {
 interface ConversationState {
   messageResult: MessageResultType | null;
   messages: MessageType[];
+  thinking: boolean;
   setMessageResult: (message: MessageResultType | null) => void;
   addMessage: (message: MessageType) => void;
+  setThinking: (thinking: boolean) => void;
 }
 
 export const useConversation = create<ConversationState>()((set) => ({
   messageResult: null,
   messages: [],
+  thinking: false,
   setMessageResult: (messageResult) => set({ messageResult }),
   addMessage: (message) => set((state) => ({ messages: [...state.messages, message] })),
+  setThinking: (thinking) => set({ thinking }),
 }));
