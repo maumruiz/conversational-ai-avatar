@@ -6,7 +6,7 @@
   <h3 align="center">Conversational AI Avatar</h3>
 
   <p align="center">
-    An prototype to demonstrate the workflow of an end-to-end ai avatar, using speech-to-text, text-to-speech and an agentic workflow.
+    A prototype to demonstrate the workflow of an end-to-end ai avatar, using speech-to-text, text-to-speech and an agentic workflow.
   </p>
 Demo Video:
 
